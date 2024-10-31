@@ -1,3 +1,7 @@
+'use client';
+
+import Link from 'next/link';
+
 const Header = () => {
   return (
     <header className="py-4 border-b border-gray-700">
@@ -6,9 +10,9 @@ const Header = () => {
         <div className="flex gap-6">
           <a href="#collection" className="text-gray-300 hover:text-white">Collection</a>
           <a href="#about" className="text-gray-300 hover:text-white">About</a>
-          <button onClick={() => window.open('https://opensea.io', '_blank')} className="bg-accent-600 hover:bg-accent-700 px-4 py-2 rounded-lg font-semibold">
+          <Link href="https://opensea.io" target="_blank" rel="noopener noreferrer" className="bg-accent-600 hover:bg-accent-700 px-4 py-2 rounded-lg font-semibold">
             View on OpenSea
-          </button>
+          </Link>
         </div>
       </nav>
     </header>
