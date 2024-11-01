@@ -4,15 +4,20 @@ import { theme } from './theme'
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    padding: 0;
   }
 
   body {
     font-family: ${theme.typography.fontFamily};
     background-color: ${theme.colors.background};
+    min-height: 100vh;
     color: ${theme.colors.text};
     line-height: ${theme.typography.body.lineHeight};
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -59,8 +64,13 @@ export const GlobalStyle = createGlobalStyle`
 
   .container {
     max-width: ${theme.breakpoints.desktop};
+    width: 100%;
     margin: 0 auto;
-    padding: 0 ${theme.spacing.md};
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
   }
 
   img {

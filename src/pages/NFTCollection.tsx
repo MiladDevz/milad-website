@@ -21,14 +21,15 @@ const FilterSection = styled.div`
 const FilterButton = styled.button<{ active?: boolean }>`
   background: ${props => props.active ? theme.colors.primary : 'white'};
   color: ${props => props.active ? 'white' : theme.colors.text};
-  border: 1px solid ${theme.colors.border};
+  border: 2px solid ${theme.colors.border};
   padding: ${theme.spacing.sm} ${theme.spacing.md};
   border-radius: ${theme.borderRadius.medium};
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    background: ${props => props.active ? theme.colors.accent : theme.colors.background};
+    background: ${props => props.active ? theme.colors.accent : theme.colors.primary};
+    color: white;
   }
 `
 
@@ -36,31 +37,31 @@ const FilterButton = styled.button<{ active?: boolean }>`
 const mockNFTs = [
   {
     id: '1',
-    image: '/nft-samples/milad-1.png',
-    title: 'Milad #1',
-    description: 'A unique Milad with punk style',
+    image: '/nft-samples/happy.png',
+    title: 'Milad #8524',
+    description: 'Happy style Milad',
     tokenId: '1',
-    style: 'Punk'
+    style: 'Happy'
   },
   {
     id: '2',
-    image: '/nft-samples/milad-2.png',
-    title: 'Milad #2',
-    description: 'A unique Milad with classic style',
+    image: '/nft-samples/kawaii.png',
+    title: 'Milad #8380',
+    description: 'Kawaii style Milad',
     tokenId: '2',
-    style: 'Classic'
+    style: 'Kawaii'
   },
   {
     id: '3',
-    image: '/nft-samples/milad-3.png',
-    title: 'Milad #3',
-    description: 'A unique Milad with hip-hop style',
+    image: '/nft-samples/gamer.png',
+    title: 'Milad #1815',
+    description: 'Gamer style Milad',
     tokenId: '3',
-    style: 'Hip-Hop'
+    style: 'Gamer'
   }
 ]
 
-const styles = ['All', 'Punk', 'Classic', 'Hip-Hop']
+const styles = ['All', 'Happy', 'Kawaii', 'Gamer']
 
 export const NFTCollection: React.FC = () => {
   const [selectedStyle, setSelectedStyle] = useState('All')
@@ -79,7 +80,7 @@ export const NFTCollection: React.FC = () => {
       <CollectionHeader>
         <Title>Milad Maker Collection</Title>
         <Text>
-          Explore our collection of 10,000 unique Milad NFTs, each with its own style and personality.
+          A collection of 10,000 generative pfpFTs in a special aesthetic inspired by modern fashion and nostalgia.
         </Text>
       </CollectionHeader>
 

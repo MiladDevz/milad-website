@@ -1,24 +1,24 @@
 export const theme = {
   colors: {
     primary: '#ff69b4',
-    background: '#fff0f5',
+    background: '#ffebf2',
     cardBackground: '#ffffff',
     text: '#333333',
-    border: '#ffb6c1',
-    accent: '#ff1493',
+    border: '#ffcce0',
+    accent: '#ff69b4',
     secondary: '#ff69b4',
   },
   typography: {
-    fontFamily: "'Arial', sans-serif",
+    fontFamily: "'Helvetica', 'Arial', sans-serif",
     heading: {
       fontSize: '2rem',
-      fontWeight: 700,
+      fontWeight: 600,
       lineHeight: 1.2,
     },
     body: {
       fontSize: '1rem',
       fontWeight: 400,
-      lineHeight: 1.5,
+      lineHeight: 1.6,
     },
   },
   spacing: {
@@ -32,7 +32,7 @@ export const theme = {
     mobile: '320px',
     tablet: '768px',
     desktop: '1024px',
-    wide: '1280px',
+    wide: '1000px',
   },
   borderRadius: {
     small: '4px',

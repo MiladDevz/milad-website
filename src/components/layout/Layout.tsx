@@ -6,22 +6,25 @@ import { Container } from '../common/Container'
 const LayoutWrapper = styled.div`
   min-height: 100vh;
   background-color: ${theme.colors.background};
+  display: flex;
+  flex-direction: column;
 `
 
 const Header = styled.header`
-  background-color: white;
+  background-color: ${theme.colors.background};
   padding: ${theme.spacing.md} 0;
-  border-bottom: 1px solid ${theme.colors.border};
+  text-align: center;
 `
 
 const Main = styled.main`
   padding: ${theme.spacing.xl} 0;
+  flex: 1;
 `
 
 const Footer = styled.footer`
-  background-color: white;
+  background-color: ${theme.colors.background};
   padding: ${theme.spacing.lg} 0;
-  border-top: 1px solid ${theme.colors.border};
+  text-align: center;
   margin-top: auto;
 `
 

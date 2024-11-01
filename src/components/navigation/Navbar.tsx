@@ -5,9 +5,10 @@ import { theme } from '../../styles/theme'
 import { Container } from '../common/Container'
 
 const Nav = styled.nav`
-  background-color: white;
+  background-color: ${theme.colors.background};
   padding: ${theme.spacing.md} 0;
-  border-bottom: 1px solid ${theme.colors.border};
+  border-bottom: 2px solid ${theme.colors.border};
+  margin-bottom: ${theme.spacing.md};
 `
 
 const NavContainer = styled(Container)`
@@ -19,7 +20,7 @@ const NavContainer = styled(Container)`
 const NavLink = styled(RouterLink)`
   color: ${theme.colors.text};
   text-decoration: none;
-  padding: ${theme.spacing.sm} ${theme.spacing.md};
+  padding: ${theme.spacing.xs} ${theme.spacing.md};
   border-radius: ${theme.borderRadius.medium};
   transition: background-color 0.3s ease;
 
@@ -40,7 +41,7 @@ const NavLinks = styled.div`
 
 const Logo = styled.img`
   height: 40px;
-  cursor: pointer;
+  margin: ${theme.spacing.xs} 0;
 `
 
 export const Navbar: React.FC = () => {

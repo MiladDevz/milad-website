@@ -5,7 +5,7 @@ import { Container } from '../common/Container'
 import { Link } from '../common/Typography'
 
 const FooterWrapper = styled.footer`
-  background-color: white;
+  background-color: ${theme.colors.background};
   padding: ${theme.spacing.xl} 0;
   border-top: 1px solid ${theme.colors.border};
 `
@@ -20,7 +20,7 @@ const FooterContainer = styled(Container)`
 const SocialLinks = styled.div`
   display: flex;
   gap: ${theme.spacing.md};
-  margin: ${theme.spacing.md} 0;
+  margin: ${theme.spacing.lg} 0;
 `
 
 const FooterText = styled.p`
@@ -30,7 +30,8 @@ const FooterText = styled.p`
 `
 
 const FooterLink = styled(Link)`
-  color: ${theme.colors.text};
+  color: ${theme.colors.primary};
+  font-weight: bold;
   transition: color 0.3s ease;
 
   &:hover {
